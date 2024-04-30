@@ -57,28 +57,28 @@ t: 100002-element Vector{Float64}:
  1000.0
 u: 100002-element Vector{SVector{2, Float64}}:
  [0.816496580927726, 0.2721655269759087]
- [0.8218322707392857, 0.2864572888747676]
- [0.8175309275503967, 0.3036081155524447]
- [0.8241416114496443, 0.3155010517190914]
- [0.825735950740503, 0.3050921269330344]
- [0.8459367334782085, 0.2710596602986614]
- [0.8391783726118689, 0.2854754443296147]
- [0.8154175962785046, 0.27031027203196956]
- [0.8025587949785473, 0.27034160575122357]
- [0.8317025089693519, 0.2590758262481383]
+ [0.8225273113589071, 0.26481156336087164]
+ [0.8119496234516973, 0.24310550237466097]
+ [0.8141524878632556, 0.2307296773926865]
+ [0.8011585946615166, 0.2568145969029549]
+ [0.7975261998739278, 0.25679779246676815]
+ [0.7947790534169529, 0.24954329410597192]
+ [0.8094228535523917, 0.2724908063004886]
+ [0.7939973342097975, 0.2939532919755951]
+ [0.778089089086335, 0.30311208267372725]
  ⋮
- [0.8407287683443632, 0.14389432714093398]
- [0.8303962377683335, 0.16416835559020798]
- [0.8296296522623907, 0.17431506463305435]
- [0.8451326253031138, 0.20295613299673787]
- [0.8443430750779096, 0.20418095697491243]
- [0.8759759308872249, 0.2239135694300507]
- [0.9001694831879008, 0.24759671131153377]
- [0.9075791623259386, 0.25599289494269784]
- [0.9075786389798244, 0.25600069139807047]</code></pre><p>In the keyword arguments, we have specified the time step <code>dt</code> and total duration <code>tmax</code> of the numerical time integration.</p><p>The simulated trajectory is stored in <code>sim</code> as a matrix with 2 rows corresponding to the state variables <span>$u$</span>, <span>$v$</span>, and 10,000 columns corresponding to the time steps.</p><p>Let&#39;s plot the result. Did the trajectory transition to the other attractor?</p><pre><code class="language-julia hljs">using CairoMakie
+ [-0.7384435180202176, -0.2726170953954006]
+ [-0.7383851823041778, -0.28662492955952723]
+ [-0.738912673334074, -0.2743586896331751]
+ [-0.742649684683706, -0.3006727784851757]
+ [-0.7359031265750482, -0.2906957521383126]
+ [-0.7480043864914278, -0.285013316286964]
+ [-0.7523567256370916, -0.2726520575069101]
+ [-0.74219623496907, -0.24503267571633328]
+ [-0.7421902814632129, -0.24502750660101635]</code></pre><p>In the keyword arguments, we have specified the time step <code>dt</code> and total duration <code>tmax</code> of the numerical time integration.</p><p>The simulated trajectory is stored in <code>sim</code> as a matrix with 2 rows corresponding to the state variables <span>$u$</span>, <span>$v$</span>, and 10,000 columns corresponding to the time steps.</p><p>Let&#39;s plot the result. Did the trajectory transition to the other attractor?</p><pre><code class="language-julia hljs">using CairoMakie
 fig = Figure(size = (800, 600), fontsize=18)
 ax = Axis(fig[1, 1], xlabel = &quot;u&quot;, ylabel = &quot;v&quot;)
 limits!(-1.2,1.2,-0.6,0.6)
 lines!(ax, sim[1,:], sim[2,:])
 scatter!(ax, [fp1[1], fp2[1]], [fp1[2], fp2[2]], color=:red, markersize=20)
-fig</code></pre><img src="15030475.png" alt="Example block output"/><p>Hopefully, this helped you to get started. For more info, check out the Manual section of these docs.</p></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../quickstart/">« Quickstart</a><a class="docs-footer-nextpage" href="../man/stochsystem/">Defining a StochSystem »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="auto">Automatic (OS)</option><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 1.4.0 on <span class="colophon-date" title="Monday 22 April 2024 09:07">Monday 22 April 2024</span>. Using Julia version 1.10.2.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+fig</code></pre><img src="b15f0c52.png" alt="Example block output"/><p>Hopefully, this helped you to get started. For more info, check out the Manual section of these docs.</p></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../quickstart/">« Quickstart</a><a class="docs-footer-nextpage" href="../man/stochsystem/">Defining a StochSystem »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="auto">Automatic (OS)</option><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 1.4.0 on <span class="colophon-date" title="Tuesday 30 April 2024 07:27">Tuesday 30 April 2024</span>. Using Julia version 1.10.2.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
